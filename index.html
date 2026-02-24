@@ -1,0 +1,320 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+<!-- head css block --> 
+
+
+  <!-- font អក្សរពណ៏ក្រហម បើចង់បានពណ៏អីផ្សេងដូចតែcolorបានហើយ--> 
+  <style>
+  .my-text-red-color {color: red; /* text color */font-family: 'Khmer OS Battambang', Arial, sans-serif;font-size: 18px;}
+  </style>
+  <!-- font អក្សរពណ៏ក្រហម -->  
+
+  <!-- font អក្សរពណ៏ខៀវ បើចង់បានពណ៏អីផ្សេងដូចតែcolorបានហើយ--> 
+  <style>
+  .my-text-blue-color {color: blue; /* text color */font-family: 'Khmer OS Battambang', Arial, sans-serif;font-size: 18px;}
+  </style>
+  <!-- font អក្សរពណ៏ខៀវ --> 
+
+
+
+
+
+
+
+  <!-- Logo ខាងលើ វិលជាAnimation --> 
+  <style>
+  .logo-animate {
+  display: inline-block;
+  animation: rotateLogo 1.5s linear infinite;
+  max-width: 150px; /* max size on PC */
+  width: 100%;      /* allows it to shrink in smaller containers */
+  height: auto;     /* keeps aspect ratio */
+}
+
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Make it smaller on smartphones */
+@media (max-width: 576px) {
+  .logo-animate {
+    max-width: 80px;  /* smaller logo on phones */
+  }
+}
+
+    <!-- Logo ខាងលើ វិលជាAnimation --> 
+
+
+
+    
+    <!-- bootstrap style for catagories item --> 
+    <style>
+     body {background-color: #f4f4f4;font-family: Arial, sans-serif;}
+    .hero1 {padding: 40px 80px; /* default for PC & tablet */text-align: left }
+     @media (max-width: 576px) {
+    .hero1 {
+     padding: 20px 10px; /* override for smartphones */
+     text-align: center;}}
+
+
+    .shop-category {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.10s;}
+    .shop-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);}
+    .shop-category img {
+      max-width: 150px;
+      margin-bottom: 15px;}
+    .shop-stats {
+      font-size: 0.9rem;
+      color: #555;}
+     </style>
+    <!-- bootstrap style for catagories item --> 
+
+
+
+
+    
+    <!-- bootstrap style for Navbar-search -->
+    <style>
+    .my-navbar {background-color: #1E90FF; /* Dodger Blue */}
+    /* Navbar links */
+    .my-navbar .nav-link {color: white;}
+    .my-navbar .nav-link:hover {color: yellow;}
+    .my-navbar .nav-link.active {color: gold;}
+    /* Dropdown menu background */
+    .my-navbar .dropdown-menu {background-color: #104E8B; /* darker blue */}
+    .my-navbar .dropdown-item {color: white;}
+    .my-navbar .dropdown-item:hover {background-color: #1E90FF;color: yellow;}
+    /* Search input style */.my-search {background-color: white;color: black;}
+    /* Search button */
+   .my-navbar .btn-outline-light {border-color: white;color: white;}
+   .my-navbar .btn-outline-light:hover {background-color: white;color: #1E90FF;}
+    </style>
+    <!-- bootstrap style for Navbar-search -->
+
+
+
+    <!-- ផ្ទាំង ខាងឆ្វេងអំពីProfile , offcanvas -->
+    <style>
+    .offcanvas-body img {width: 80px; border-radius: 50%;}
+    </style>
+    <!-- ផ្ទាំង ខាងឆ្វេងអំពីProfile , offcanvas -->
+
+
+
+</head>
+
+
+<body>
+
+
+     <!-- ក្បាល ឈ្មោះ Banner និង Logo -->
+      <div class="bg-primary text-white p-1">
+      <div class="container">
+      <div class="row align-items-center">
+
+      <!-- Logo -->
+      <div class="col-md-3 text-center text-md-start">
+      <img src="Image/Banner/Final_Logo-removebg-preview (1).png" alt="Logo" class="logo-animate">
+      </div>
+
+      <!-- Text -->
+      <div class="col-md-9 text-center text-md-start">
+      <h1 class="fw-bold mb-1 fs-4 fs-md-2">Davin MEP Tools Store</h1>
+      <p class="mb-0 fs-6 fs-md-5">Professional Tools for Engineers & Contractors</p>
+      </div>
+
+      </div>
+      </div>
+      </div>
+     <!-- ក្បាល ឈ្មោះ Banner និង Logo -->
+
+
+
+    <br>
+
+
+    <!-- បើកoffcanvas ផ្ទាំង Profile ហាង-->
+     <div class="d-flex align-items-center p-2">
+    <button class="btn btn-black me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#profileOffcanvas" aria-controls="profileOffcanvas">
+    <i class="bi bi-list fs-4"></i>
+    </button>
+    <span>Profile</span>
+    </div>
+
+
+
+  
+      <!-- Offcanvas sidebar -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="profileOffcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel">Company Profile</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+      <div class="text-center mb-3">
+      <img src="Image/Banner/Logo1.png" alt="Company Logo">
+      <h6 class="mt-1">Davin MEP Tools</h6>
+      </div>
+      <p><strong>About Us:</strong> We provide professional tools for engineers & contractors.</p>
+      <p><strong>Online Shop:</strong> <a href="#">Visit Shop</a></p>
+      <p><strong>Contact:</strong> support@example.com</p>
+      <p>"I know it’s tough, but I would fight for it and be happy about that." ✅ ខ្ញុំដឹងថាវា ពិបាក តែខ្ញុំនឹងស៊ូ និងរីករាយនឹងរឿងពិបាក១ហ្នឹង។</p>
+      <p class="my-text-red-color">Quete by វីន</p>
+      </div>
+      </div> 
+      </div>
+      </div>
+     <!-- បើកoffcanvas ផ្ទាំង Profile ហាង-->
+
+
+
+
+
+
+      <!-- Hero Section -->
+      <div class="hero1">
+        <p style="font-family: 'Khmer OS Battambang', Arial, sans-serif; font-size: 18px;">
+         សូមស្វាគមន៏ មកកាន់Davin MEP Tools Store អស់បារម្ភ ចំពោះការទិញខុសសម្ភារៈ ដោយជួបអ្នកជំនាញផ្នែក
+        </p>
+        <p style="font-family: 'Khmer OS Battambang', Arial, sans-serif; font-size: 18px;">
+         អស់បារម្ភ ចំពោះការទិញខុសសម្ភារៈ ដោយជួបអ្នកជំនាញផ្នែក
+        </p>
+       <span style="color: black; background-color: whitesmoke; font-family: Arial; font-size: 18px; font-weight: bold; padding: 4px;">
+          High-quality tools and materials for professionals
+       </span> 
+       </div>
+
+  <!-- Categories -->
+  <div class="container">
+    <div class="row g-4">
+
+     <div class="row g-4">
+
+
+
+<!-- Electrical Wire -->
+<div class="col-12 col-sm-6 col-md-4">
+  <div class="shop-category">
+    <a href="Bro ly.html">
+      <img src="Image/MEP/Electrical/wire 2" alt="Pipe Fitting 1" class="img-fluid border">
+    </a>
+    <h3>Electrical Wire</h3>
+    <p class="shop-stats">300 items available</p>
+  </div>
+</div>
+<!-- Electrical Wire -->
+
+       
+ <!-- Electrical Wire -->
+<div class="col-12 col-sm-6 col-md-4">
+  <div class="shop-category">
+    <a href="Bro ly.html">
+      <img src="Image/MEP/Electrical/wire 2" alt="Pipe Fitting 1" class="img-fluid border">
+    </a>
+    <h3>Electrical Wire</h3>
+    <p class="shop-stats">300 items available</p>
+  </div>
+</div>
+<!-- Electrical Wire -->
+
+
+ <!-- Electrical Wire -->
+<div class="col-12 col-sm-6 col-md-4">
+  <div class="shop-category">
+    <a href="Bro ly.html">
+      <img src="Image/MEP/Electrical/wire 2" alt="Pipe Fitting 1" class="img-fluid border">
+    </a>
+    <h3>Electrical Wire</h3>
+    <p class="shop-stats">300 items available</p>
+  </div>
+</div>
+<!-- Electrical Wire -->
+     
+     
+<!-- Electrical Wire -->
+<div class="col-12 col-sm-6 col-md-4">
+  <div class="shop-category">
+    <a href="Bro ly.html">
+      <img src="Image/MEP/Electrical/wire 2" alt="Pipe Fitting 1" class="img-fluid border">
+    </a>
+    <h3>Electrical Wire</h3>
+    <p class="shop-stats">300 items available</p>
+  </div>
+</div>
+<!-- Electrical Wire -->
+
+<!-- Electrical Wire -->
+<div class="col-12 col-sm-6 col-md-4">
+  <div class="shop-category">
+    <a href="Bro ly.html">
+      <img src="Image/MEP/Electrical/wire 2" alt="Pipe Fitting 1" class="img-fluid border">
+    </a>
+    <h3>Electrical Wire</h3>
+    <p class="shop-stats">300 items available</p>
+  </div>
+</div>
+<!-- Electrical Wire -->
+
+
+ <!-- Electrical Wire -->
+<div class="col-12 col-sm-6 col-md-4">
+  <div class="shop-category">
+    <a href="Bro ly.html">
+      <img src="Image/MEP/Electrical/wire 2" alt="Pipe Fitting 1" class="img-fluid border">
+    </a>
+    <h3>Electrical Wire</h3>
+    <p class="shop-stats">300 items available</p>
+  </div>
+</div>
+<!-- Electrical Wire -->
+     
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- Clickable Telegram icon -->
+<a href="https://www.facebook.com/dkeo963?rdid=ji6P8Us21VzUrSvz&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18CpLAQSfh%2F#" target="_blank" class="text-black fs-6 me-3">
+  <i class="bi bi-messenger"></i>
+</a>
+
+
+
+
+
+
+</body>
+</html>
